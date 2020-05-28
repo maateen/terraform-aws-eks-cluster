@@ -1,6 +1,6 @@
 variable "region" {
   description = "The AWS region you'd like to deploy the cluster in."
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "environment" {

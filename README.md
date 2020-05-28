@@ -1,3 +1,15 @@
+# Terraform AWS EKS Cluster
+
+Terraform codes for launching a managed Kubernetes Cluster on AWS EKS.
+
+## Usage
+
+```shell script
+$ terraform init
+$ terraform validate
+$ terraform apply
+```
+
 ## Requirements
 
 | Name | Version |
@@ -28,7 +40,7 @@
 | iam\_path | If provided, all IAM roles will be created on this path. | `string` | `"/"` | no |
 | kubeconfig\_path | Where to save the Kubectl config file. | `string` | `"~/.kube/config"` | no |
 | kubelet\_extra\_args | This string is passed directly to kubelet if set. Useful for adding labels or taints. | `string` | `"--node-labels=node.kubernetes.io/lifecycle=normal"` | no |
-| region | The AWS region you'd like to deploy the cluster in. | `string` | `"us-east-1"` | no |
+| region | The AWS region you'd like to deploy the cluster in. | `string` | `"us-east-2"` | no |
 | root\_iops | The amount of provisioned IOPS. This must be set with a volume\_type of 'io1'. | `number` | `0` | no |
 | root\_volume\_size | Root volume size of workers instances. | `number` | `100` | no |
 | root\_volume\_type | Root volume type of workers instances, can be 'standard', 'gp2', or 'io1' | `string` | `"gp2"` | no |
